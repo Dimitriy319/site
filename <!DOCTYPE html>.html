@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>БЛАГОДІЙНИЙ ФОНД ВІФЕЗДА-БОРИСЛАВ</title>
+  <style>
+    .section.contact {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f5f5f5;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .section.contact h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .contact-info a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons .icon {
+      font-size: 32px;
+      margin: 0 10px;
+      transition: transform 0.3s, color 0.3s;
+      color: #555;
+    }
+
+    .icon.instagram:hover {
+      color: #E1306C;
+      transform: scale(1.2);
+    }
+
+    .icon.facebook:hover {
+      color: #3b5998;
+      transform: scale(1.2);
+    }
+
+    .icon.youtube:hover {
+      color: #FF0000;
+      transform: scale(1.2);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background: #005baa;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ffffff;
+    }
+
+    h2 {
+      color: #005baa;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .donate-box {
+      background: #e3f2fd;
+      padding: 15px;
+      border-left: 4px solid #005baa;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .contact {
+      background: #f1f1f1;
+      padding: 10px;
+    }
+
+    blockquote {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 10px 20px;
+      margin: 10px 0;
+    }
+
+    /* Слайдер */
+    .slider {
+      position: relative;
+      max-width: 100%;
+      max-height: 700px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+    }
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .nav button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .dots {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 5px;
+      background-color: gray;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .active {
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>БЛАГОДІЙНИЙ ФОНД ВІФЕЗДА-БОРИСЛАВ</h1>
+    <p>Charitable Foundation VIFEZDA-BORYSLAV</p>
+  </header>
+
+  <!-- Слайдер -->
+  <div class="slider">
+    <div class="slides">
+      <img src="https://drive.google.com/thumbnail?id=1D4r6Y63CBTQ1xjourDRyTQxVtAXrfZBJ&sz=w1600" alt="photo">
+      <img src="https://drive.google.com/thumbnail?id=1X1F6b3KHNUEdOH2UseEa23DXk7Jv3oQB&sz=w1600" alt="Фото 2" />
+      <img src="https://drive.google.com/thumbnail?id=1b94yEIzJ8tiFje6eQLKjDQjSuvdY1OUB&sz=w1600" alt="Фото 3" />
+      <img src="https://drive.google.com/thumbnail?id=1u6xpNVT5kbJAclT3rXLbygjLcZquXJKB&sz=w1600" alt="Фото 3" />
+      <img src="https://drive.google.com/thumbnail?id=1JtcUy3ONixGH_ITo_3ZdMGGK1FQPT8Pi&sz=w1600" alt="Фото 3" />
+      <img src="https://drive.google.com/thumbnail?id=15c4GZcovopNrHOxjfe17aUzPqRY0wGjb&sz=w1600" alt="Фото 3" />
+    </div>
+    <div class="nav">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+  </div>
+  <div class="dots" id="dots"></div>
+
+  <div class="container">
+    <div class="section">
+      <h2>Місія / Mission</h2>
+      <p>Допомога та всебічне сприяння в примиренні людини і Бога через духовну та матеріальну опіку.</p>
+    </div>
+
+    <div class="section">
+      <h2>Напрями діяльності / Focus Areas</h2>
+      <ul>
+        <li>Духовна та практична допомога людям похилого віку</li>
+        <li>Допомога дітям-сиротам</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Центр соціальної опіки «Дім милосердя»</h2>
+      <p><strong>Мета проєкту:</strong> духовна та фізіологічна допомога малозахищеним верствам населення — людям
+        похилого віку, постраждалим від війни, дітям-сиротам.</p>
+      <p><strong>Локація:</strong> Львівська область, с. Попелі, 5 гектарів території. Всього 90 км до кордону з Польщею
+        — безпечне та мальовниче місце.</p>
+      <p><strong>Що заплановано:</strong></p>
+      <ul>
+        <li>Пансіонат для 80 людей похилого віку</li>
+        <li>Притулок для 40 дітей-сиріт</li>
+        <li>Табірна база для 200 дітей</li>
+        <li>Спортивні майданчики, СПА-зона, медичний центр</li>
+        <li>Готель та бістро для відвідувачів</li>
+      </ul>
+      <p><strong>Загальна площа забудови:</strong> 4000 м²</p>
+      <p><em>Проєкт реалізується спільно з релігійною громадою «НЦ ЄХБ» м. Борислав</em></p>
+    </div>
+
+    <div class="section">
+      <h2>Біблійна мотивація</h2>
+      <blockquote>
+        <p>«Що тільки вчинили ви одному з найменших братів Моїх цих, те Мені ви вчинили» — Матвія 25:40</p>
+        <p>«Принесіть же ви всю десятину до дому скарбниці... чи небесних отворів вам не відчиню» — Малахії 3:10</p>
+        <p>«І коли хто напоїть вас кухлем води... той не згубить своєї нагороди!» — Марка 9:41</p>
+        <p>«А хто знає, чи не на час, як оцей, досягла ти царства!» — Естер 4:14</p>
+      </blockquote>
+    </div>
+
+    <div class="section">
+      <h2>Пожертви / Donations</h2>
+      <div class="donate-box"><strong>UAH:</strong><br>IBAN: UA873052990000026004021037608</div>
+      <div class="donate-box"><strong>USD:</strong><br>IBAN: UA023052990000026003031032791</div>
+      <div class="donate-box"><strong>EUR:</strong><br>IBAN: UA223052990000026008041031118</div>
+      <div class="donate-box"><strong>PLN:</strong><br>IBAN: UA513052990000026000001029135</div>
+      <div class="donate-box"><strong>GBP:</strong><br>IBAN: UA283052990000026003001038662</div>
+      <p><em>Отримувач: БФ ВIФЕЗДА-БОРИСЛАВ / Code: 42890075<br>Банк: АТ КБ "ПРИВАТБАНК"</em></p>
+      <p><strong>Хочете підтримати «Дім милосердя»?</strong> Використовуйте реквізити, вказані вище.</p>
+    </div>
+
+    <div class="donate-box">
+      <h2>Контакти / Contacts</h2>
+      <div class="contact-info">
+        <p><strong>Телефон / Телеграм:</strong> +38 (063) 754 42 05</p>
+        <p><strong>Email:</strong> <a href="mailto:swchofm@gmail.com">swchofm@gmail.com</a></p>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com/bf_vifezda_boryslav?igsh=Y3UxNGl5M3Z2NHJ5&fbclid=IwY2xjawMSYNBleHRuA2FlbQIxMQBicmlkETFxN0RuVERyZnlpVzhKbHMzAR5kJPQQeMTwKS0MLcDOArxZJmVgpZTbGomxvTaF8SQdD8xCm9p0iSZU4uBqAQ_aem_YEiidrC6S8AsxO0veiZXZw"
+          target="_blank" class="icon instagram" title="Instagram" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/office.bethsaida?locale=uk_UA" target="_blank" class="icon facebook"
+          title="Facebook" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@HouseofMercy-w6c" target="_blank" class="icon youtube" title="YouTube"
+          aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+    </p>
+
+    <div class="section">
+      <h2>Відео про проєкт</h2>
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+        <iframe src="https://www.youtube.com/embed/fEHmY2Oj0KA"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="section partners">
+      <h2>Наші партнери</h2>
+      <div class="partner-slider">
+        <div class="partner-track">
+          <img src="partner1.png" alt="Партнер 1">
+          <img src="partner2.png" alt="Партнер 2">
+          <img src="partner3.png" alt="Партнер 3">
+          <img src="partner4.png" alt="Партнер 4">
+          <img src="partner5.png" alt="Партнер 5">
+          <!-- Додай скільки потрібно логотипів -->
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <footer>
+    &copy; 2025 БФ ВІФЕЗДА-БОРИСЛАВ. Підтримай нас.
+  </footer>
+
+  <script>
+    const slides = document.querySelector(".slides");
+    const images = document.querySelectorAll(".slides img");
+    const dotsContainer = document.getElementById("dots");
+    let currentIndex = 0;
+    let autoSlide;
+
+    images.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => {
+        goToSlide(i);
+        resetAutoSlide();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    function updateDots() {
+      document.querySelectorAll(".dot").forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentIndex);
+      });
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      updateDots();
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      goToSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      goToSlide(currentIndex);
+    }
+
+    document.getElementById("next").addEventListener("click", () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+
+    document.getElementById("prev").addEventListener("click", () => {
+      prevSlide();
+      resetAutoSlide();
+    });
+
+    function startAutoSlide() {
+      autoSlide = setInterval(nextSlide, 5000); // 5 секунд
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlide);
+      startAutoSlide();
+    }
+
+    goToSlide(0);
+    startAutoSlide();
+  </script>
+</body>
+
+</html>
